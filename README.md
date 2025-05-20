@@ -2,15 +2,20 @@
 ------------------------------------------------------------------------------------------------------------------------------------
 # Transliteration System using RNN, GRU & LSTM with Encoder-Decoder Seq2Seq Models (with and without Attention)
 
-# Wandb Link:
+Wandb Link:
 ------------------------------------------------------------------------------------------------------------------------------------------
-# Dataset
+# Folders(which folder contains what)
+
+Dataset
+
 This folder contains data which we used in this Project
 
-# Codes
+Codes
+
 This folder contains codes(da6401_ass3_a is without attention and da6401_ass3_b is with attention)
 
-# Test data Predicted Datasets
+Test data Predicted Datasets
+
 This folder has two csv files,predictions_vanilla.csv(i.e Predictions of test dataset without attention) and predictions_attentions.csv(Predictions of test dataset with attention)
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 # Project Description
