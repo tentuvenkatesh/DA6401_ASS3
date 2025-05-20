@@ -2,7 +2,7 @@
 
 # Transliteration System using RNN, GRU & LSTM with Encoder-Decoder Seq2Seq Models (with and without Attention)
 
-Wandb Link:
+Wandb Link: https://api.wandb.ai/links/tentuvenkatesh2-indian-institute-of-technology-madras/j1l9nb2o
 
 ## Fileinfo
 
