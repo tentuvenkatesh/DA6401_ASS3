@@ -1,6 +1,6 @@
-** Venkatesh Tentu-Ma23m025,DA6401-Assigenment3 **
+Venkatesh Tentu-Ma23m025,DA6401-Assigenment3
 
-In this Assigenment i trained a model which predicts english to telugu word.
+__Transliteration System using RNN, GRU & LSTM with Encoder-Decoder Seq2Seq Models (with and without Attention)__
 
 Wandb Link:
 
