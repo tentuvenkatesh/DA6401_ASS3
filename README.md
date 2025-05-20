@@ -118,7 +118,7 @@ dropout: 0.2, 0.3
 
 new_learning_rate:0.001,0.01,0.1
 
-# Best Hyperparameters(Without Attention):
+# Best Hyperparameters(With Attention):
 
 input_embed_size: 64
 
