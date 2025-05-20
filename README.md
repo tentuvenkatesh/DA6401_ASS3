@@ -41,6 +41,23 @@ The model is trained using the Adam optimizer with a cross-entropy loss function
 
 Hyperparameters such as embedding size, number of layers, hidden layer size, learning rate, and dropout rate are tuned using Bayesian optimization. Wandb is used for experiment tracking and hyperparameter search.
 
+| Command                   | Description                                   | Accepted Values                   | Value                                                                               |
+|---------------------------|-----------------------------------------------|-----------------------------------|-------------------------------------------------------------------------------------|
+| `--train_dataset_path`,<br> `-ptrn` | Path to the training dataset            | String                            | `/kaggle/input/dakshina-dataset/te.translit.sampled.train.tsv`                 |
+| `--test_dataset_path`,<br> `-ptst`  | Path to the testing dataset             | String                            | `/kaggle/input/dakshina-dataset/te.translit.sampled.test.tsv`                  |
+| `--epochs`,<br> `-ep`               | Number of epochs for training          | Integer                           | `10`                                                                                |
+| `--optimizer`,<br> `-opt`           | Optimizer for training                 | `'adam'`                          | `adam`                                                                              |
+| `--batch_size`,<br> `-bs`           | Batch size for training                | Integer                           | `64`                                                                                |
+| `--input_embed_size`,<br> `-ies`    | Size of the input embedding            | Integer                           | `64`                                                                                |
+| `--num_enc_layers`,<br> `-nel`      | Number of layers in the encoder        | Integer                           | `3`                                                                                 |
+| `--num_dec_layers`,<br> `-ndl`      | Number of layers in the decoder        | Integer                           | `3`                                                                                 |
+| `--hid_layer_size`,<br> `-hls`      | Size of the hidden layer               | Integer                           | `512`                                                                               |
+| `--cell_type`,<br> `-ct`            | Type of RNN cell for encoder and decoder | `'lstm'`                        | `lstm`                                                                              |
+| `--bidirectional`,<br> `-bd`        | Whether to use bidirectional RNN layers  | Boolean                           | `True`                                                                              |
+| `--dropout`,<br> `-dp`              | Dropout rate for regularization        | Float                             | `0.2`                                                                               |
+| `--new_learning_rate`,<br> `-lr`    | Learning rate for the optimizer        | Float                             | `0.001`                                                                             |
+
+
 # Sweep Configuration(Without Attention)
 
 Below are the Sweep Configuration which i used for Question 1 to Question 4
@@ -128,19 +145,3 @@ After training, the model is evaluated on the test set to assess its performance
 # Conclusion
 
 With above reults,we can conclude that after adding  Attention to our network,,our model accuracy has been increased.
-
-| Command                   | Description                                   | Accepted Values                   | Default Value                                                                       |
-|---------------------------|-----------------------------------------------|-----------------------------------|-------------------------------------------------------------------------------------|
-| `--train_dataset_path`,<br> `-ptrn` | Path to the training dataset            | String                            | `/kaggle/input/dakshina-dataset/te.translit.sampled.train.tsv`                 |
-| `--test_dataset_path`,<br> `-ptst`  | Path to the testing dataset             | String                            | `/kaggle/input/dakshina-dataset/te.translit.sampled.test.tsv`                  |
-| `--epochs`,<br> `-ep`               | Number of epochs for training          | Integer                           | `10`                                                                                |
-| `--optimizer`,<br> `-opt`           | Optimizer for training                 | `'adam'`                          | `adam`                                                                              |
-| `--batch_size`,<br> `-bs`           | Batch size for training                | Integer                           | `64`                                                                                |
-| `--input_embed_size`,<br> `-ies`    | Size of the input embedding            | Integer                           | `64`                                                                                |
-| `--num_enc_layers`,<br> `-nel`      | Number of layers in the encoder        | Integer                           | `3`                                                                                 |
-| `--num_dec_layers`,<br> `-ndl`      | Number of layers in the decoder        | Integer                           | `3`                                                                                 |
-| `--hid_layer_size`,<br> `-hls`      | Size of the hidden layer               | Integer                           | `512`                                                                               |
-| `--cell_type`,<br> `-ct`            | Type of RNN cell for encoder and decoder | `'lstm'`                        | `lstm`                                                                              |
-| `--bidirectional`,<br> `-bd`        | Whether to use bidirectional RNN layers  | Boolean                           | `True`                                                                              |
-| `--dropout`,<br> `-dp`              | Dropout rate for regularization        | Float                             | `0.2`                                                                               |
-| `--new_learning_rate`,<br> `-lr`    | Learning rate for the optimizer        | Float                             | `0.001`                                                                             |
