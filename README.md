@@ -129,12 +129,10 @@ After training, the model is evaluated on the test set to assess its performance
 
 With above reults,we can conclude that after adding  Attention to our network,,our model accuracy has been increased.
 
-| Command                   | Description                                   | Accepted Values                   | Value                                                                       |
+| Command                   | Description                                   | Accepted Values                   | Default Value                                                                       |
 |---------------------------|-----------------------------------------------|-----------------------------------|-------------------------------------------------------------------------------------|
-| `--train_dataset_path`,<br> `-ptrn` | Path to the training dataset            | String                            | `/kaggle/input/dakshina-dataset/te.translit.sampled.train.tsv`
-  |
-| `--test_dataset_path`,<br> `-ptst`  | Path to the testing dataset             | String                            | `/kaggle/input/dakshina-dataset/te.translit.sampled.test.tsv`
-  |
+| `--train_dataset_path`,<br> `-ptrn` | Path to the training dataset            | String                            | `/kaggle/input/aksharantar/aksharantar_sampled/ben/ben_train.csv`                |
+| `--test_dataset_path`,<br> `-ptst`  | Path to the testing dataset             | String                            | `/kaggle/input/aksharantar/aksharantar_sampled/ben/ben_test.csv`                 |
 | `--epochs`,<br> `-ep`               | Number of epochs for training          | Integer                           | `10`                                                                                |
 | `--optimizer`,<br> `-opt`           | Optimizer for training                 | `'adam'`                          | `adam`                                                                              |
 | `--batch_size`,<br> `-bs`           | Batch size for training                | Integer                           | `64`                                                                                |
