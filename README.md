@@ -41,8 +41,6 @@ The model is trained using the Adam optimizer with a cross-entropy loss function
 
 Hyperparameters such as embedding size, number of layers, hidden layer size, learning rate, and dropout rate are tuned using Bayesian optimization. Wandb is used for experiment tracking and hyperparameter search.
 
-## Results
-
 # Sweep Configuration(Without Attention)
 
 Below are the Sweep Configuration which i used for Question 1 to Question 4
