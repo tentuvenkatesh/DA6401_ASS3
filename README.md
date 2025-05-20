@@ -37,6 +37,12 @@ python,numpy,wandb,torch,matplotlib,pandas
 
 The model is trained using the Adam optimizer with a cross-entropy loss function. During training, the model learns to minimize the difference between the predicted translations and the ground truth translations in the training set.
 
+## Hyperparameter Tuning
+
+Hyperparameters such as embedding size, number of layers, hidden layer size, learning rate, and dropout rate are tuned using Bayesian optimization. Wandb is used for experiment tracking and hyperparameter search.
+
+## Results
+
 # Sweep Configuration(Without Attention)
 
 Below are the Sweep Configuration which i used for Question 1 to Question 4
@@ -116,6 +122,10 @@ dropout: 0.2
 new_learning_rate:0.001
 
 With above hyperparameters best validation accuracy is 61.75%,and when i tried with the test dataset,i got test accuracy:61.73%
+
+## Testing
+
+After training, the model is evaluated on the test set to assess its performance on unseen data. The test accuracy and loss are reported to measure the effectiveness of the model.
 
 # Conclusion
 
