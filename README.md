@@ -20,6 +20,23 @@ This project aims to build a transliteration system that converts text from one 
 
 python,numpy,wandb,torch,matplotlib,pandas
 
+## Model Architecture
+
+### Encoder
+- **Embedding layer:** Converts input tokens into dense vectors of fixed size.
+- **Bidirectional RNN/GRU/LSTM layers:** Captures bidirectional dependencies in the input sequence.
+- **Dropout:** Regularization technique to prevent overfitting.
+- **Context vector:** Aggregates information from the entire input sequence into a fixed-size vector.
+
+### Decoder
+- **Embedding layer:** Converts input tokens into dense vectors of fixed size.
+- **RNN/GRU/LSTM layers:** Generates the output sequence based on the context vector and previous decoder states.
+- **Attention mechanism (optional):** Allows the decoder to focus on different parts of the input sequence while generating the output.
+
+## Training
+
+The model is trained using the Adam optimizer with a cross-entropy loss function. During training, the model learns to minimize the difference between the predicted translations and the ground truth translations in the training set.
+
 # Sweep Configuration(Without Attention)
 
 Below are the Sweep Configuration which i used for Question 1 to Question 4
