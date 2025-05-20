@@ -20,7 +20,7 @@ This project aims to build a transliteration system that converts text from one 
 
 python,numpy,wandb,torch,matplotlib,pandas
 
-# Project RoadMap
+# Sweep Configuration(Without Attention)
 
 Below are the Sweep Configuration which i used for Question 1 to Question 4
 
@@ -40,7 +40,7 @@ dropout: 0.2, 0.3
 
 new_learning_rate:0.001,0.01,0.1
 
-# Best Hyperparameters:
+# Best Hyperparameters(Without Attention):
 
 input_embed_size: 64
 
@@ -58,5 +58,49 @@ dropout: 0.3
 
 new_learning_rate:0.001
 
-# With above hyperparameters best validation accuracy is 56.802%
+With above hyperparameters best validation accuracy is 56.802%,and when i tried with the test dataset,i got test accuracy:57%
+
+# Sweep Configuration(With Attention)
+
+Below are the Sweep Configuration which i used for Question 5
+
+input_embed_size: 16,32,64,256,512
+
+num_enc_layers: 1
+
+num_dec_layers: 1
+
+hid_layer_size: 16,32,64,256,512
+
+cell_type: lstm
+
+bidirectional: True ,False
+
+dropout: 0.2, 0.3
+
+new_learning_rate:0.001,0.01,0.1
+
+# Best Hyperparameters(Without Attention):
+
+input_embed_size: 64
+
+num_enc_layers: 1
+
+num_dec_layers: 1
+
+hid_layer_size: 512
+
+cell_type: lstm
+
+bidirectional: True
+
+dropout: 0.2
+
+new_learning_rate:0.001
+
+With above hyperparameters best validation accuracy is 61.75%,and when i tried with the test dataset,i got test accuracy:61.73%
+
+# Conclusion
+
+With above reults,we can conclude that after adding  Attention to our network,,our model accuracy has been increased.
 
