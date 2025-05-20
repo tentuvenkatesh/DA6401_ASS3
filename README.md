@@ -1,6 +1,6 @@
-Venkatesh Tentu-Ma23m025,DA6401-Assigenment3
+# Venkatesh Tentu-Ma23m025
 
-#Transliteration System using RNN, GRU & LSTM with Encoder-Decoder Seq2Seq Models (with and without Attention)
+# Transliteration System using RNN, GRU & LSTM with Encoder-Decoder Seq2Seq Models (with and without Attention)
 
 Wandb Link:
 
