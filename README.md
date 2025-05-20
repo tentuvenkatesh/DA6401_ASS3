@@ -21,3 +21,42 @@ This project aims to build a transliteration system that converts text from one 
 python,numpy,wandb,torch,matplotlib,pandas
 
 # Project RoadMap
+
+Below are the Sweep Configuration which i used for Question 1 to Question 4
+
+input_embed_size: 16,32,64,256,512
+
+num_enc_layers: 1,2,3
+
+num_dec_layers: 1,2,3
+
+hid_layer_size: 16,32,64,256,512
+
+cell_type: 'rnn','gru','lstm'
+
+bidirectional: True, False
+
+dropout: 0.2, 0.3
+
+new_learning_rate:0.001,0.01,0.1
+
+# Best Hyperparameters:
+
+input_embed_size: 64
+
+num_enc_layers: 2
+
+num_dec_layers: 2
+
+hid_layer_size: 512
+
+cell_type: lstm
+
+bidirectional: False
+
+dropout: 0.3
+
+new_learning_rate:0.001
+
+# With above hyperparameters best validation accuracy is 56.802%
+
